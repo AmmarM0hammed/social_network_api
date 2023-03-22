@@ -49,6 +49,9 @@ GET user info
 - **api/posts/user**
 POST update user info acsept [**name**] - [**phone**] - [**address**] - [**photo**]  
 
+- **api/user/{id}/posts**
+GET user posts
+
 
 - **api/logout**
 GET to Logout
