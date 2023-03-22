@@ -2,9 +2,12 @@
 
 
 
-## About Laravel
-
+## Public Link
 
 - **api/login**
-acsept two param [**email**] - [**password**] and return token
+accept two param [**email**] - [**password**] and return token
+
+- **api/register**
+acsept [**name**] - [**email**] - [**password**] - [**confirm_password**] 
+and return token and user data
 
