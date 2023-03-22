@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Post;
@@ -161,5 +162,25 @@ class PostController extends Controller
         ];
         return response()->json($responce, 400);
 
+    }
+
+
+    public function user_posts(Request $request , $id){
+
+        $user = User::find($id);
+
+        if (!$user) {
+            $responce = [
+                'success' => false,
+                'message' => "User not found"
+            ];
+            return response()->json($responce, 400);
+        }
+
+        $responce = [
+            'success' => true,
+            'posts' => $user->posts
+        ];
+        return response()->json($responce, 400);
     }
 }
