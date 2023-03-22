@@ -2,7 +2,7 @@
 
 
 
-## Public Link
+## Public Route
 
 - **api/login**
 accept two param [**email**] - [**password**] and return token
@@ -11,3 +11,44 @@ accept two param [**email**] - [**password**] and return token
 acsept [**name**] - [**email**] - [**password**] - [**confirm_password**] 
 and return token and user data
 
+## Protected Route
+
+- **api/posts**
+GET all posts 
+
+- **api/posts/{id}**
+GET single Post
+
+- **api/posts**
+POST create Post  acsept  [**title**] - [**images**] (as array)
+
+- **api/posts/{id}**
+PUT update Post acsept  [**title**]
+
+- **api/posts/{id}**
+DELETE Post acsept
+
+- **api/posts/{id}/comment**
+GET comment for post
+
+- **api/posts/{id}/comment**
+POST comment acsept [**comment**] 
+
+- **api/comments/{id}**
+PUT comment acsept [**comment**] 
+
+- **api/comments/{id}**
+DELETE comment
+
+- **api/posts/{id}/likes**
+GET like or dislike post
+
+- **api/posts/user**
+GET user info
+
+- **api/posts/user**
+POST update user info acsept [**name**] - [**phone**] - [**address**] - [**photo**]  
+
+
+- **api/logout**
+GET to Logout
